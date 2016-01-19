@@ -1,0 +1,70 @@
+body {background-color:white}
+
+div {
+    border: dashed cyan 0px;
+    padding: 5px;
+}
+
+button {
+    background-color: skyblue;
+    font-family: Tahoma, sans-serif;
+    padding: 2px 3px 2px 3px;
+}
+
+#header {
+    height: 5%;
+    border-top: 2px blue solid;
+}
+.logo {
+    /*content:url("maplogin_72px.png");  Firefox doesn't accept content:url*/
+    width: 24px;
+    height: 24px;
+    float: left;
+    padding: 5px 10px 5px 1px;
+}
+#output {
+    font-family: Arial, sans-serif;
+    font-size: 75%;
+}
+
+#frame-outer {
+    height: 700px;
+    display: table-cell;
+    position: relative;
+}
+#map { 
+    position: absolute;
+    border: 1px solid olive;
+    border-radius: 1%;    
+    width: 600px;
+    height: 600px;
+    padding: 0;
+    display: block;
+    /*cursor: crosshair;*/
+}
+
+#footer {
+    height: 10%;
+    margin-top: 2%;
+    width: 100%; 
+    margin:0; 
+    border-top: 1px blue solid;   
+}
+#foot_left{
+    float: left;
+    width: 30%;
+    overflow: hidden;    
+    height: 75%;
+}
+#about{
+    font-family: Arial, sans-serif;
+    font-size: 80%;
+}
+#foot_right{
+    margin-left: 30%;    
+    overflow: hidden;
+}
+#copyright {
+    font-family: Verdana, sans-serif;
+    font-size: 75%;
+}

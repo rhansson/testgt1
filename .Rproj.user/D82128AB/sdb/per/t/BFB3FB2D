@@ -1,0 +1,17 @@
+{
+    "contents" : "<!DOCTYPE html>\n<!-- Copyright (c) 2015 Roland Hansson - Nova Spatial LLC. All rights reserved. !-->\n<html lang=\"en\">\n  <head>    \n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n    <meta name=\"description\" content=\"Testing GT1\">\n    <title>TestGT1</title>\n    <link rel=\"stylesheet\" href=\"stylesheets/testgt1.css\" type=\"text/css\" media=\"screen\" />\n    <!-- Include order: first jquery, then opencpu.js, and then your code -->\n    <script src=\"//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js\"></script> \n    <script src=\"scripts/opencpu-0.5.js\"></script>\n    <script src=\"//d3js.org/d3.v3.min.js\" charset=\"utf-8\"></script>\n    <script src=\"//d3js.org/colorbrewer.v1.min.js\"></script>    \n    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.js'></script>\n    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet' />\n  </head>\n  <body>\n    <div id=\"header\">\n      <img class=\"logo\" id=\"logo1\" src=\"favicon.ico\"/>      \n      <p>\n      <button id=\"test\" type=\"button\">Test</button>\n      Theme:\n      <select id=\"theme\">\n      <option value=\"starb\">Starbucks</option>\n      <option value=\"colls\">Traffic Collisions</option>      \n      </select>\n      <button id=\"refresh\" type=\"button\">Refresh</button>\n      <input id=\"auto\" value=\"\" type=\"checkbox\">\n      <button id=\"corr\" type=\"button\">Corr</button>\n      <textarea id=\"output\" rows=\"1\" cols=\"30\"></textarea>\n      </p>\n    </div>\n    <div id=\"frame-outer\">          \n      <div id=\"map\" class=\"map\"></div>      \n    </div>\n\n    <div id=\"footer\">\n      <div id=\"foot_left\">\n        <p id=about></p>      <!-- load()  !-->\n      </div>\n      <div id=\"foot_right\">\n        <p id=copyright></p>  <!-- load()  !-->\n      </div>\n    </div>\n    \n    <noscript>\n        <p>Javascript must be enabled!</p>\n    </noscript>\n  \n    <script src=\"scripts/testgt1.js\"></script>\n  </body>\n  \n</html>\n",
+    "created" : 1452814292658.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3072896044",
+    "id" : "BFB3FB2D",
+    "lastKnownWriteTime" : 1452989495,
+    "path" : "C:/Users/roland/Rolles/Nova_Spatial/GeoTuple/testgt1/inst/www/testgt1.html",
+    "project_path" : "inst/www/testgt1.html",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "html"
+}

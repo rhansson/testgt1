@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Copyright (c) 2015 Roland Hansson - Nova Spatial LLC. All rights reserved. !-->
+<html lang="en">
+  <head>    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Testing GT1">
+    <title>TestGT1</title>
+    <link rel="stylesheet" href="stylesheets/testgt1.css" type="text/css" media="screen" />
+    <!-- Include order: first jquery, then opencpu.js, and then your code -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+    <script src="scripts/opencpu-0.5.js"></script>
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="//d3js.org/colorbrewer.v1.min.js"></script>    
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet' />
+  </head>
+  <body>
+    <div id="header">
+      <img class="logo" id="logo1" src="favicon.ico"/>      
+      <p>
+      <button id="test" type="button">Test</button>
+      Theme:
+      <select id="theme">
+      <option value="starb">Starbucks</option>
+      <option value="colls">Traffic Collisions</option>      
+      </select>
+      <button id="refresh" type="button">Refresh</button>
+      <input id="auto" value="" type="checkbox">
+      <button id="corr" type="button">Corr</button>
+      <textarea id="output" rows="1" cols="30"></textarea>
+      </p>
+    </div>
+    <div id="frame-outer">          
+      <div id="map" class="map"></div>      
+    </div>
+
+    <div id="footer">
+      <div id="foot_left">
+        <p id=about></p>      <!-- load()  !-->
+      </div>
+      <div id="foot_right">
+        <p id=copyright></p>  <!-- load()  !-->
+      </div>
+    </div>
+    
+    <noscript>
+        <p>Javascript must be enabled!</p>
+    </noscript>
+  
+    <script src="scripts/testgt1.js"></script>
+  </body>
+  
+</html>

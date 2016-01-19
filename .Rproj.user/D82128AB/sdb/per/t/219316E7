@@ -1,0 +1,16 @@
+{
+    "contents" : "# \nlibrary(opencpu)\n# opencpu$browse(\"/library/testgt1/www/testgt1.html\")\n#\n#\n# installing/loading the package:\n#if(!require(installr)) {\n#  install.packages(\"installr\"); require(installr)} #load / install+load installr\n#updateR() # brings up dialogs and suggests using rGUI for the update\n\n\ntest <-function (x=\"\") {\n  print(\"test\")\n  list(message = paste(x, \" \", R.Version()$version.string))\n}\n\n\ntestgt1 <- function (sw, ne, zoom=14, theme=\"starb\", style=\"val\", theme2=\"\") {  \n  # testgt1( c(33.73428,-117.97638), c(33.82038,-117.82981), 15)\n  #res = list(sw, ne)  # list of two LatLng objects * NOTICE order lat[1] lon[2]\n  df <- list()\n\n  xmin <- sw[2]\n  ymin <- sw[1]\n  xmax <- ne[2]\n  ymax <- ne[1]  \n  df <- getPoints(theme, xmin, ymin, xmax, ymax)  \n  \n  return(df)\n}\n\ngetPoints <-function(theme, xmin, ymin, xmax, ymax) {\n  # set working dir to path of R script for csv file input\n  # http://stackoverflow.com/questions/3452086/getting-path-of-an-r-script?lq=1\n  rdir <- getSrcDirectory(function(x) {x})\n  setwd(rdir)\n  df2 <- data.frame(matrix(ncol = 0, nrow = 0))\n  if (theme==\"starb\") {\n    df = read.csv(\"starbucks_oc.csv\", sep=\"\\t\")\n    #View(df)\n    df2 <- subset(df, X>xmin & Y>ymin & X<xmax & Y<ymax, select = c(X,Y))\n    colnames(df2)[which(names(df2) == \"X\")] <- \"x\"\n    colnames(df2)[which(names(df2) == \"Y\")] <- \"y\"\n  } else if (theme==\"colls\") {\n    df = read.csv(\"collision.csv\", sep=\",\")\n    #View(df)\n    df2 <- subset(df, POINT_X>xmin & POINT_Y>ymin & POINT_X<xmax & POINT_Y<ymax, select = c(POINT_X,POINT_Y, INJURED))\n    colnames(df2)[which(names(df2) == \"POINT_X\")] <- \"x\"\n    colnames(df2)[which(names(df2) == \"POINT_Y\")] <- \"y\"\n  } \n  return(df2)\n}\n\ncorXY <-function(df) {\n  Cor <- cor(df, use=\"complete.obs\")\n  #print(Cor)\n  corVal <- Cor[2,1]\n  return(corVal)\n}\n",
+    "created" : 1452641514033.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1400285572",
+    "id" : "219316E7",
+    "lastKnownWriteTime" : 1452988862,
+    "path" : "C:/Users/roland/Rolles/Nova_Spatial/GeoTuple/testgt1/R/testgt1.R",
+    "project_path" : "R/testgt1.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
