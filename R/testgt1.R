@@ -35,7 +35,7 @@ getPoints <-function(theme, xmin, ymin, xmax, ymax) {
   tryCatch({
     rdir <- getSrcDirectory(function(x) {x})
   }, error = function(err) {      
-    rdir <- "./data"  # opencpu ERROR: character argument expected In call: setwd(rdir)
+    rdir <- "../../R"  # opencpu ERROR: character argument expected In call: setwd(rdir)
   }, finally = {
     setwd(rdir)
   })
