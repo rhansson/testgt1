@@ -32,8 +32,11 @@ testgt1 <- function (sw, ne, zoom=14, theme="starb", style="val", theme2="") {
 getPoints <-function(theme, xmin, ymin, xmax, ymax) {
   # set working dir to path of R script for csv file input
   # http://stackoverflow.com/questions/3452086/getting-path-of-an-r-script?lq=1
-  try({  # Ignore opencpu ERROR: character argument expected In call: setwd(rdir)
+  tryCatch({
     rdir <- getSrcDirectory(function(x) {x})
+  }, error = function(err) {      
+    rdir <- "./data"  # opencpu ERROR: character argument expected In call: setwd(rdir)
+  }, finally = {
     setwd(rdir)
   })
   df2 <- data.frame(matrix(ncol = 0, nrow = 0))
