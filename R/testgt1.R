@@ -30,26 +30,21 @@ testgt1 <- function (sw, ne, zoom=14, theme="starb", style="val", theme2="") {
 }
 
 getPoints <-function(theme, xmin, ymin, xmax, ymax) {
-  # set working dir to path of R script for csv file input
-  # http://stackoverflow.com/questions/3452086/getting-path-of-an-r-script?lq=1
-  tryCatch({
-    rdir <- getSrcDirectory(function(x) {x})
-  }, error = function(err) {      
-    rdir <- "../../R"  # opencpu ERROR: character argument expected In call: setwd(rdir)
-  }, finally = {
-    setwd(rdir)
-  })
   df2 <- data.frame(matrix(ncol = 0, nrow = 0))
   if (theme=="starb") {
-    df = read.csv("starbucks_oc.csv", sep="\t")
-    #View(df)
-    df2 <- subset(df, X>xmin & Y>ymin & X<xmax & Y<ymax, select = c(X,Y))
+    # lazy load as data frame: sb.df
+    #sb.df = read.csv("./data/starbucks_oc.csv", sep="\t")
+    #View(sb.df)
+    #save(sb.df, file="starbucks_oc.rda")
+    df2 <- subset(sb.df, X>xmin & Y>ymin & X<xmax & Y<ymax, select = c(X,Y))
     colnames(df2)[which(names(df2) == "X")] <- "x"
     colnames(df2)[which(names(df2) == "Y")] <- "y"
   } else if (theme=="colls") {
-    df = read.csv("collision.csv", sep=",")
-    #View(df)
-    df2 <- subset(df, POINT_X>xmin & POINT_Y>ymin & POINT_X<xmax & POINT_Y<ymax, select = c(POINT_X,POINT_Y, INJURED))
+    # lazy load as data frame: cl.df
+    #cl.df = read.csv("./data/collision.csv", sep=",")
+    #View(cl.df)
+    #save(cl.df, file="collision.rda")
+    df2 <- subset(cl.df, POINT_X>xmin & POINT_Y>ymin & POINT_X<xmax & POINT_Y<ymax, select = c(POINT_X,POINT_Y, INJURED))
     colnames(df2)[which(names(df2) == "POINT_X")] <- "x"
     colnames(df2)[which(names(df2) == "POINT_Y")] <- "y"
   } 
