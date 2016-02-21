@@ -25,7 +25,7 @@ $(document).ready(function(){
   $('#copyright').load("copyright.html");
 
   // set up Mapbox
-  L.mapbox.accessToken = 'pk.eyJ1Ijoicm9sYW5kaGFuc3NvbiIsImEiOiI1eDRwVlRBIn0.po6MwM6ZOeSVXxHy6HvzWg';
+  L.mapbox.accessToken = 'YOUR_KEY_HERE';
   L_map = L.mapbox.map('map', 'mapbox.light', {
     maxZoom: 17, minZoom: 5,
     legendControl: {
