@@ -71,7 +71,7 @@ JB :
   rss_path : nil
 
   # 
-  permalink: /_posts/:title
+  baseurl: /testgt1
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
