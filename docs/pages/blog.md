@@ -9,7 +9,7 @@ description:
     <li>
 <!--      <a href="{{site.url}}{{post.url}}">{{ post.title }}</a>
 -->
-			<a href="{{site.url}}">{{ post.title }}</a>		
+			<a href="{{post.url}}">{{ post.title }}</a>		
     </li>
   {% endfor %}
 </ul>
