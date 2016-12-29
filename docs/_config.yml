@@ -8,10 +8,10 @@ highlighter: rouge
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : Test site
+title : GeoTuple.org
 author :
   name : Roland Hansson
-  email : kbroman@gmail.com
+  email : info@geotuple.org
   github : rhansson
   twitter : RolandHansson
   feedburner : nil

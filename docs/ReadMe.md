@@ -1,18 +1,8 @@
-## Simple site: Easy websites with GitHub pages
+## docs folder
 
-[Github Pages](http://pages.github.com) provide a simple way to make a
-website using Markdown and git.
-
-This is a minimal tutorial to get started.
-
-View the thing [here](http://kbroman.org/simple_site).
+The contents of this folder is for the [website](http://www.geotuple.org/). 
+It is not part of the geotuple app source code per se.
 
 ---
 
-To the extent possible under law,
-[Karl Broman](http://github.com/kbroman)
-has waived all copyright and related or neighboring rights to
-&ldquo;[simple site](http://github.com/kbroman/simple_site)&rdquo;.
-This work is published from the United States.
-<br/>
-[![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
+Copyright (c) 2016 Roland Hansson - Nova Spatial LLC. 
